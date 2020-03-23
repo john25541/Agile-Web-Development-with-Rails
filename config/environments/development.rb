@@ -3,6 +3,21 @@ Rails.application.configure do
 
   config.action_cable.disable_request_forgery_protection = true
 
+  # Don't actually send emails
+  config.action_mailer.delivery_method = :test
+  #
+  # Alternate configuration example, using gmail:
+  #   config.action_mailer.delivery_method = :smtp
+  #   config.action_mailer.smtp_settings = {
+  #     address:        "smtp.gmail.com",
+  #     port:           587, 
+  #     domain:         "domain.of.sender.net",
+  #     authentication: "plain",
+  #     user_name:      "dave",
+  #     password:       "secret",
+  #     enable_starttls_auto: true
+  #   } 
+  
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.

@@ -1,15 +1,17 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
+ * This is a manifest file that'll be compiled into application.css, which will
+ * include all the files listed below.
+ * 
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets,
+ * vendor/assets/stylesheets, or any plugin's vendor/assets/stylesheets
+ * directory can be referenced here using a relative path.
+ * 
+ * You're free to add application-wide styles to this file and they'll appear
+ * at the bottom of the compiled file so the styles you add here take
+ * precedence over styles defined in any other CSS/SCSS files in this
+ * directory. Styles in this file should be added after the last require_*
+ * statement. It is generally better to create a new file per style scope.
+ * 
  *= require_tree .
  *= require_self
  */
@@ -60,6 +62,7 @@ body>td {
         background: white;
         flex: 1;
     }
+    //
     #side {
         padding: 1em 2em;
         background: #141;
@@ -90,6 +93,7 @@ body>td {
             }
         }
     }
+    //
 }
 
 @media all and (max-width: 800px) {
@@ -100,9 +104,48 @@ body>td {
 
 @media all and (max-width: 500px) {
     #banner {
-        height: 1em
+        height: 1em;
     }
     #banner .title {
         display: none;
     }
 }
+
+//
+.depot_form {
+    fieldset {
+        background: #efe;
+        legend {
+            color: #dfd;
+            background: #141;
+            font-family: sans-serif;
+            padding: 0.2em 1em;
+        }
+        div {
+            margin-bottom: 0.3em;
+        }
+    }
+    form {
+        label {
+            width: 5em;
+            float: left;
+            text-align: right;
+            padding-top: 0.2em;
+            margin-right: 0.1em;
+            display: block;
+        }
+        select,
+        textarea,
+        input {
+            margin-left: 0.5em;
+        }
+        .submit {
+            margin-left: 4em;
+        }
+        br {
+            display: none;
+        }
+    }
+}
+
+//

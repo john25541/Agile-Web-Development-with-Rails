@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :orders
   resources :line_items
   resources :carts
+  get 'stores/index', to: 'stores#index'
 
   root 'stores#index'
 

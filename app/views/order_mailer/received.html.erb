@@ -1,5 +1,77 @@
-<h1>Order#received</h1>
+<table style="background-color:#fff;height:100%!important;margin:0 auto;padding:0;width:650px;font-size:14px;color:#444;line-height:18px" border="0" width="650px" cellspacing="0" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td style="background:#efefef;padding:10px;height:100%!important" align="center" valign="top">
+<table border="0" width="600" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td><img height="60" src="https://ci6.googleusercontent.com/proxy/slCn2-0LQV7nCrTCdB0JFXchXypTUQwFMBbpdWLaqpTlgnMyCSJlBWrM4wsLaIX22sDEzLA4JEyzwOH5sQMtiRcKiiy0Qujk0jHmJsTKeNYHeA=s0-d-e1-ft#https://static.getticket.vn/uploads/logo/logo_màu_topdev1.png" alt="" class="CToWUd"></td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style="background:#fff;padding:30px 10px" align="center" valign="top">
+<table border="0" width="600" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div style="font-size:22px;line-height:120%;margin-bottom:10px">Đơn <span class="il">hàng</span> của bạn đã hoàn tất!</div>
+<table>
+<tbody>
+<tr>
+<td><img style="outline-width:0px;max-width:180px;width:150px" src="https://ci6.googleusercontent.com/proxy/slCn2-0LQV7nCrTCdB0JFXchXypTUQwFMBbpdWLaqpTlgnMyCSJlBWrM4wsLaIX22sDEzLA4JEyzwOH5sQMtiRcKiiy0Qujk0jHmJsTKeNYHeA=s0-d-e1-ft#https://static.getticket.vn/uploads/logo/logo_màu_topdev1.png" alt="" class="CToWUd">
+<div dir="ltr">&nbsp;</div>
+</td>
+<td style="padding-left:40px">
+<p style="margin:0;margin-bottom:5px"><strong>THE PRAGMATIC BOOKSHELF</strong></p>
+<p style="margin:0;margin-bottom:5px"><strong>Website:</strong></p>
+<p style="margin:0;margin-bottom:5px"><strong>Facebook: </strong><%= link_to "https://www.facebook.com/id20111998", 'https://www.facebook.com/id20111998' %></p>
+</td>
+</tr>
+</tbody>
+</table>
+<div style="margin:20px 0;width:100%;border-top:1px solid #ccc;min-height:1px">&nbsp;</div>
+<p style="line-height:150%;margin:0;padding:0">Chào <strong><%=@order.name%>,</strong></p>
+<br>
+<p style="line-height:150%;margin:0;padding:0"><strong>Chúc mừng bạn đã đặt hàng thành công,</strong></p>
+<br>
+<table style="border-collapse:collapse!important;width:100%" border ="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="padding:0 0 10px 0">
+<h3 style="color:#606060!important;font-size:18px;font-weight:bold;letter-spacing:-0.5px;line-height:20px;text-align:left;padding:0px;margin:0px">Thông tin đơn <span class="il">hàng</span></h3>
+</td>
+</tr>
+<tr>
+<td style="border-collapse:collapse!important;background-color:#efefef;border-top:1px solid #d4d4d4;padding:15px 0 15px 15px" align="left" valign="top" width="33%"><strong>Địa <span class="il">chỉ</span></strong></td>
+<td style="border-collapse:collapse!important;border-top:1px solid #d4d4d4;padding:15px 0 15px 15px" align="left" valign="top"><%=@order.address%></td>
+</tr>
+<tr>
+<td style="border-collapse:collapse!important;background-color:#efefef;border-top:1px solid #d4d4d4;padding:15px 0 15px 15px" align="left" valign="top" width="33%"><strong>Ngày <span class="il">đặt</span> hàng</strong></td>
+<td style="border-collapse:collapse!important;border-top:1px solid #d4d4d4;padding:15px 0 15px 15px" align="left" valign="top"><%=Time.now.strftime("%d-%m-%Y %H:%M")%></td>
+</tr>
+<tr>
+<td style="border-collapse:collapse!important;background-color:#efefef;border-top:1px solid #d4d4d4;padding:15px 0 15px 15px" align="left" valign="top" width="33%"><strong>Số lượng</strong></td>
+<td style="border-collapse:collapse!important;border-top:1px solid #d4d4d4;padding:15px 0 15px 15px" align="left" valign="top">1</td>
+</tr>
+<tr>
+<td style="border-collapse:collapse!important;background-color:#efefef;border-top:1px solid #d4d4d4;padding:15px 0 15px 15px" align="left" valign="top" width="33%"><strong>Giá trị đơn <span class="il">hàng</span></strong></td>
+<td style="border-collapse:collapse!important;border-top:1px solid #d4d4d4;padding:15px 0 15px 15px" align="left" valign="top"><%= number_to_currency(@cart.total_price) %></td>
+</tr>
 
-<p>
-  <%= @greeting %>, find me in app/views/order_mailer/received.html.erb
-</p>
+<tr>
+<td style="border-collapse:collapse!important;background-color:#efefef;border-top:1px solid #d4d4d4;padding:15px 0 15px 15px" align="left" valign="top" width="33%"><strong>Phương thức thanh <span class="il">toán</span></strong></td>
+<td style="border-collapse:collapse!important;border-top:1px solid #d4d4d4;padding:0px 0 0px 15px" align="left" valign="middle"><%=@order.pay_type%></td>
+</td>
+</tr>
+<tr>
+<td style="border-collapse:collapse!important;background-color:#efefef;border-top:1px solid #d4d4d4;border-bottom:1px solid #d4d4d4;padding:15px 0 15px 15px" align="left" valign="top" width="33%"><strong>Tình trạng đơn <span class="il">hàng</span></strong></td>
+<td style="border-collapse:collapse!important;border-top:1px solid #d4d4d4;border-bottom:1px solid #d4d4d4;padding:15px 0 15px 15px" align="left" valign="top">Đã tiếp  hận</td>
+</tr>
+</tbody>
+</table>
+</tbody>
+</table>

@@ -1,4 +1,5 @@
 class Product < ApplicationRecord
+  mount_uploader :image, ImageUploader
   has_many :line_items
   has_many :orders, through: :line_items
   validates :title, :description, :image_url, presence: true

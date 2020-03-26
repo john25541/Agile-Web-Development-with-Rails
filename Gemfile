@@ -5,6 +5,9 @@ ruby '2.7.0'
 
 gem 'bcrypt', '~> 3.1.7'
 
+gem "devise", "~> 4.1"
+
+gem 'carrierwave', '~> 2.1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4.2'

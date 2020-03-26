@@ -15,5 +15,5 @@ Product.create(title: 'Seven Mobile Apps in Seven Weeks',
     experienced developer needing to expand your options. Plus, you’ll find
     out which cross-platform solution makes the most sense for your needs.
     </p>},
-image_url: '7apps.jpg',
+image: '7apps.jpg',
 price: 26.00)

@@ -16,17 +16,17 @@ ActiveRecord::Schema.define(version: 2020_03_26_032213) do
   enable_extension "plpgsql"
 
   create_table "carts", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "line_items", force: :cascade do |t|
     t.bigint "product_id", null: false
     t.bigint "cart_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.decimal "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer "quantity", default: 1
+    t.decimal "price"
     t.bigint "order_id"
     t.index ["cart_id"], name: "index_line_items_on_cart_id"
     t.index ["order_id"], name: "index_line_items_on_order_id"
@@ -46,8 +46,8 @@ ActiveRecord::Schema.define(version: 2020_03_26_032213) do
     t.string "title"
     t.text "description"
     t.decimal "price", precision: 8, scale: 2
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "image"
   end
 

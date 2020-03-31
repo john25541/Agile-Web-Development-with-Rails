@@ -1,17 +1,27 @@
 <p id="notice"><%= notice %></p>
-<%= form_for (@product) do |f| %>
-  <div class ="field">
-      <h2><%= f.label @product.title %></h2>
-      <div class ="field">
-        <%= f.label @product.description %>
-      </div>
-      <div class ="field">
-        <%= image_tag(@product.image_url, class: "list_image") %>
-      </div>
-      <div class ="field">
-        <%= f.label @product.price %>
-      </div>
-  </div>
-<% end %>
+<p >
+  <%= image_tag(@product.image_url) %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @product.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @product.image_was%>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @product.price %>
+</p>
+
 <%= link_to "Edit", edit_product_path(@product) %> |
 <%= link_to "Back", products_path %>

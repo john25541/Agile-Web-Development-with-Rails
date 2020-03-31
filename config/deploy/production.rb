@@ -41,11 +41,19 @@ role :db,  %w{deploy@example.com}
 #
 # Global options
 # --------------
+<<<<<<< HEAD
  set :ssh_options, {
    keys: %w(/home/user_name/.ssh/id_rsa),
    forward_agent: false,
    auth_methods: %w(password)
  }
+=======
+#  set :ssh_options, {
+#    keys: %w(/home/user_name/.ssh/id_rsa),
+#    forward_agent: false,
+#    auth_methods: %w(password)
+#  }
+>>>>>>> c8cd1105c59311a0767a49bcf34e03101a06cb6d
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------

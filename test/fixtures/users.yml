@@ -5,5 +5,5 @@ one:
   password_digest: <%= BCrypt::Password.create('secret') %>
 
 two:
-  name: LocNV
+  name: Ruby
   password_digest: <%= BCrypt::Password.create('secret') %>

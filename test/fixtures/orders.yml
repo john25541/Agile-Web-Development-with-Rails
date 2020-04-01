@@ -1,11 +1,10 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: John
-  address: Ho Chi Minh City
-  email: abcd@gmail.com
-  pay_type: check
-
+  name: LocNV
+  address: MyText
+  email: nguyenvanloc1247@gmail.com
+  pay_type: Check
 two:
   name: MyString
   address: MyText
